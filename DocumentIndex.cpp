@@ -7,7 +7,7 @@
 #include	<iostream>
 #include	<string>
 
-#include	<unistd.h>
+// #include	<unistd.h>
 
 #include	"DocumentIndex.h"
 #include	"GetLine.h"
