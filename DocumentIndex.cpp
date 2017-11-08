@@ -57,6 +57,8 @@ void	DocumentFile::Close()
 	
 	//************************************************************************************
 	//	EXECUTABLE STATEMENTS
+	file_.close();
+	file_.clear();
 	
 	return;
 }
@@ -120,12 +122,20 @@ bool	DocumentFile::Open(const string& name)
 {
 	//************************************************************************************
 	//	LOCAL DATA
-	bool	success;
 
 	//************************************************************************************
 	//	EXECUTABLE STATEMENTS
+	file_.open(name, ios::in);
+	if (!file_.fail())
+	{
+		//	You may add any useful initialization here.
 
-	return(success);
+		return(true);
+	}
+	else
+	{
+		return(false);
+	}
 }
 
 //****************************************************************************************
