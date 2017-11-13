@@ -179,7 +179,7 @@ input 2
 insert 2, 3
 interest 3
 interesting 3
-it 2
+it 1, 2
 its 2
 just 2
 key 2
@@ -258,7 +258,7 @@ samples 2
 search 1
 semicolon 2
 separated 1, 2
-set 1, 2
+set 1, 2, 3
 should 2
 simply 2
 single 1, 2
