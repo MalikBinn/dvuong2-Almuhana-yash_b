@@ -179,7 +179,7 @@ input 2
 insert 2, 3
 interest 3
 interesting 3
-it 1, 2
+it 2
 its 2
 just 2
 key 2
