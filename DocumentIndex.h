@@ -49,6 +49,11 @@ class	DocumentFile
 											//	the double empty lines that mark page separations.
 											//	Returns false if there are no more lines in the file.
 
+        typedef set<string> MySet;
+        typedef MySet::iterator MySetIterator;
+        MySet mySet;
+        MySetIterator mySetIterator;
+
 	private:
 		StringSize	beginPosition_;
 
@@ -60,10 +65,7 @@ class	DocumentFile
 
 		stringstream   line_stream_;
 
-		typedef set<string> MySet;
-typedef MySet::iterator MySetIterator;
-        MySet mySet;
-        MySetIterator mySetIterator;
+
 };
 
 class	DocumentIndex

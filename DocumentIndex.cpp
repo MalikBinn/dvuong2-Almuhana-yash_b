@@ -88,14 +88,15 @@ string	DocumentFile::GetWord()
 {
 	//************************************************************************************
 	//	LOCAL DATA
-	string	word;
+	string	word,nextword;
 	bool success;
 
 	//************************************************************************************
 	//	EXECUTABLE STATEMENTS
     std::string str = " .,:;?!()\"'";
     while(1){
-        success = GetLine(line_stream_,word, str);
+        success = GetLine(line_stream_,word, " ");
+
         if(!success){
             word = "";
             break;
@@ -103,6 +104,18 @@ string	DocumentFile::GetWord()
         else if(word.empty())
             continue;
         else{
+            if(ispunct(word.at(0)))
+                word = word.substr(1, word.length()-1);
+            if(word.empty())
+                continue;
+            if(ispunct(word.at(word.length()-1)))
+                word = word.substr(0, word.length()-1);
+            if(word.length()>1)
+                if(word.at(word.length()-2)== '\'' && word.at(word.length()-1)== 's')
+                    word = word.substr(0, word.length()-2);
+            if(word.empty())
+                continue;
+
             mySetIterator= mySet.find(word);
             if(mySetIterator == mySet.end()){
                 string::iterator it;
@@ -110,6 +123,7 @@ string	DocumentFile::GetWord()
                 {
                     if(!isalpha(*it))
                         break;
+
                 }
                 if(it == word.end())
                     break;
@@ -284,6 +298,7 @@ void	DocumentIndex::Create(DocumentFile& documentFile)
                         myMap[word].insert(documentFile.GetPageNumber());
                     }
                     else{
+                        documentFile.mySet.insert(word);
                         myMap2.erase(myMapIterator2);
                         myMapIterator = myMap.find(word);
                         myMap.erase(myMapIterator);
