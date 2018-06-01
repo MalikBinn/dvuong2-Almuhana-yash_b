@@ -25,6 +25,9 @@ using namespace std;
 //	CLASSES, TYPEDEFS AND STRUCTURES
 //
 //****************************************************************************************
+//!	typedef type
+/*! Variable to classify the size of string
+ */
 typedef	string::size_type	StringSize;
 
 //!  DocumentFile Class. 

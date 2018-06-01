@@ -69,7 +69,7 @@ using namespace std;
 //	the status is false if an end-of-file is immediately encountered.
 //
 //****************************************************************************************
-bool	GetLine(istream& stream, string& text)
+bool	GetThis::GetLine(istream& stream, string& text)
 {
 	//************************************************************************************
 	//	LOCAL DATA
@@ -139,7 +139,7 @@ bool	GetLine(istream& stream, string& text)
 //	is consumed but not added to the output string.
 //
 //****************************************************************************************
-bool	GetLine(istream& stream, string& text, const string& delimiter)
+bool	GetThis::GetLine(istream& stream, string& text, const string& delimiter)
 {
 	//************************************************************************************
 	//	LOCAL DATA

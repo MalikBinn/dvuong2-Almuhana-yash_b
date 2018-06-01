@@ -24,7 +24,8 @@ using namespace std;
 
 //****************************************************************************************
 //	FUNCTION PROTOTYPES
-
+class GetThis{
+	public:
 //! A GetLine function, which takes two arguments and return a boolean variable.
 /*!
   A function to read a line from the document until new line character is found.
@@ -44,5 +45,5 @@ bool	GetLine(istream& stream, string& text);
   \sa 
 */
 bool	GetLine(istream& stream, string& text, const string& delimiter);
-
+}
 #endif

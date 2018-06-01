@@ -30,8 +30,7 @@ using namespace std;
 //	CLASSES, TYPEDEFS AND STRUCTURES
 //
 //****************************************************************************************
-//!a typedef type
-/*!< Holds the size of the string  */
+
 typedef	string::size_type	StringSize;
 
 //****************************************************************************************
@@ -57,7 +56,6 @@ typedef	string::size_type	StringSize;
 //	DocumentFile::Close
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::Close()
 	*/
@@ -79,7 +77,6 @@ void	DocumentFile::Close()
 //	DocumentFile::GetPageNumber
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::GetPageNumber()
 	*/
@@ -99,7 +96,6 @@ int	DocumentFile::GetPageNumber()
 //	DocumentFile::GetWord
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::GetWord()
 	*/
@@ -122,7 +118,7 @@ string	DocumentFile::GetWord()
 	//	EXECUTABLE STATEMENTS
     std::string str = " .,:;?!()\"'";
     while(1){
-        success = GetLine(line_stream_,word, " ");
+        success = GetThis::GetLine(line_stream_,word, " ");
 
         if(!success){
             word = "";
@@ -198,7 +194,6 @@ string	DocumentFile::GetWord()
 //	DocumentFile::LoadExclusions
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::LoadExclusions
 	*/
@@ -220,7 +215,7 @@ bool	DocumentFile::LoadExclusions(const string& name)
 	{
 		//	You may add any useful initialization here.
         string word;
-        while(GetLine(file2_, word))
+        while(GetThis::GetLine(file2_, word))
         {
             mySetIterator = mySet.find(word);
             if(mySetIterator == mySet.end())
@@ -241,7 +236,6 @@ bool	DocumentFile::LoadExclusions(const string& name)
 //	DocumentFile::Open
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::Open
 	*/
@@ -270,7 +264,6 @@ bool	DocumentFile::Open(const string& name)
 //	DocumentFile::Read
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentFile::Read
 	*/
@@ -286,13 +279,13 @@ bool	DocumentFile::Read()
 
 	//************************************************************************************
 	//	EXECUTABLE STATEMENTS
-	success = GetLine(file_,text_);
+	success = GetThis::GetLine(file_,text_);
     if(text_.compare("")==0)
         {
-        success = GetLine(file_,text_);
+        success = GetThis::GetLine(file_,text_);
         if(text_.compare("")==0)
         {
-            success = GetLine(file_,text_);
+            success = GetThis::GetLine(file_,text_);
             pageNumber_++;
         }
     }
@@ -308,7 +301,6 @@ bool	DocumentFile::Read()
 //	DocumentIndex::Create
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentIndex::Create
 	*/
@@ -384,7 +376,6 @@ void	DocumentIndex::Create(DocumentFile& documentFile)
 //	DocumentIndex::Write
 //
 //****************************************************************************************
-	//! MySetIterator an iterator for MySet data type.
 	/*!
 	  \fn DocumentIndex::Write
 	*/
