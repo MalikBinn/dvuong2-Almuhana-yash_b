@@ -1,3 +1,8 @@
+//!  Document Index Implementation. 
+/*!
+  Implementation for document index.
+*/
+
 //****************************************************************************************
 //
 //	INCLUDE FILES
@@ -50,6 +55,10 @@ typedef	string::size_type	StringSize;
 //	DocumentFile::Close
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::Close()
+	*/
 void	DocumentFile::Close()
 {
 	//************************************************************************************
@@ -68,6 +77,10 @@ void	DocumentFile::Close()
 //	DocumentFile::GetPageNumber
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::GetPageNumber()
+	*/
 int	DocumentFile::GetPageNumber()
 {
 	//************************************************************************************
@@ -84,6 +97,10 @@ int	DocumentFile::GetPageNumber()
 //	DocumentFile::GetWord
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::GetWord()
+	*/
 string	DocumentFile::GetWord()
 {
 	//************************************************************************************
@@ -171,6 +188,10 @@ string	DocumentFile::GetWord()
 //	DocumentFile::LoadExclusions
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::LoadExclusions
+	*/
 bool	DocumentFile::LoadExclusions(const string& name)
 {
 	//************************************************************************************
@@ -206,6 +227,10 @@ bool	DocumentFile::LoadExclusions(const string& name)
 //	DocumentFile::Open
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::Open
+	*/
 bool	DocumentFile::Open(const string& name)
 {
 	//************************************************************************************
@@ -231,6 +256,10 @@ bool	DocumentFile::Open(const string& name)
 //	DocumentFile::Read
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentFile::Read
+	*/
 bool	DocumentFile::Read()
 {
 	//************************************************************************************
@@ -261,6 +290,10 @@ bool	DocumentFile::Read()
 //	DocumentIndex::Create
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentIndex::Create
+	*/
 void	DocumentIndex::Create(DocumentFile& documentFile)
 {
 	//************************************************************************************
@@ -326,6 +359,10 @@ void	DocumentIndex::Create(DocumentFile& documentFile)
 //	DocumentIndex::Write
 //
 //****************************************************************************************
+	//! MySetIterator an iterator for MySet data type.
+	/*!
+	  \fn DocumentIndex::Write
+	*/
 void	DocumentIndex::Write(ostream& indexStream)
 {
 	//************************************************************************************

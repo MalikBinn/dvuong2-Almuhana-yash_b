@@ -1,3 +1,10 @@
+//!  Main File. 
+/*!
+  Main file to instantiate the objects of the GetLine and DocumentIndex classes.
+  Also this file defines several test cases and monitors the output for different
+  functions in the classes and check if the outputs are as expected or not.
+*/
+
 //****************************************************************************************
 //
 //	INCLUDE FILES

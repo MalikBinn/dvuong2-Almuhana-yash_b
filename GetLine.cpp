@@ -2,6 +2,11 @@
 //
 //	INCLUDE FILES
 //
+//!  GetLine class Implementation. 
+/*!
+  A implementation of GetLine class.
+*/
+
 //****************************************************************************************
 #include	<iostream>
 #include	<string>
