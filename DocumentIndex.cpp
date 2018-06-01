@@ -30,6 +30,8 @@ using namespace std;
 //	CLASSES, TYPEDEFS AND STRUCTURES
 //
 //****************************************************************************************
+//!a typedef type
+/*!< Holds the size of the string  */
 typedef	string::size_type	StringSize;
 
 //****************************************************************************************
@@ -105,7 +107,15 @@ string	DocumentFile::GetWord()
 {
 	//************************************************************************************
 	//	LOCAL DATA
-	string	word,nextword;
+	//! string types
+	/*! string variables that are stored from user input and
+	 * passed into functions contains nextword of user input
+	*/
+	string	word,nextword
+	//! bool type
+        /*! Used for determining if the data retrieved from user input
+	 * was a success
+        */
 	bool success;
 
 	//************************************************************************************
@@ -196,6 +206,10 @@ bool	DocumentFile::LoadExclusions(const string& name)
 {
 	//************************************************************************************
 	//	LOCAL DATA
+	//! bool type
+        /*! Used for determining if the data retrieved from user input
+         * was a success
+        */
 	bool	success;
 
 	//************************************************************************************
@@ -264,6 +278,10 @@ bool	DocumentFile::Read()
 {
 	//************************************************************************************
 	//	LOCAL DATA
+	//! bool type
+        /*! Used for determining if the data retrieved from user input
+         * was a success
+        */
 	bool	success;
 
 	//************************************************************************************
@@ -302,8 +320,15 @@ void	DocumentIndex::Create(DocumentFile& documentFile)
 	//************************************************************************************
 	//	EXECUTABLE STATEMENTS
 
+	//! bool type
+        /*! Used for determining if the data retrieved from user input
+         * was a success
+        */
 	bool			success;
-
+	//! string type
+        /*! Used for retrieving a word from function and is used by 
+	 * preceeding functions
+        */
 	string			word;
 
 	//************************************************************************************
